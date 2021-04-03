@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problema 1</title>
+    <title>Problema 2</title>
     <link rel="shortcut icon" href="IMG/2.jpg" />
     <link rel="stylesheet" href="./CSS/problemas.css">
     <link rel="stylesheet" href="CSS/estilo.css">
-
-    <script src="JS/problema01.js" ></script>
+    <script src="JS/problema2.js" ></script>
 </head>
 <body>
 
@@ -39,44 +38,70 @@
             </ul>
         </nav>
     </header>
+
     <center class="g">
         <h1>
-            INVERSION A UN BANCO
+            CALCULA TU SUELDO CON COMISIONES
         </h1>
     </center>
     <br><br>
     <center>
-        <form method="post" name="formulario" >
-            <table align="center">
+        <form method="post" name="formulario">
+            <table>
                 <tr>
-                    <td class="td_sup" >Introduce la cantidad a invertir : $</td>
-                    <td class="td_inf" ><input type="text" name="cantidad"
-                        onkeypress="return validarn(event)"></td>
+                    <td class="td_sup">
+                        Digite su sueldo:
+                    </td>
+                    <td class="td_inf">
+                        <input type="text" name="sueldo" onkeypress="return validarn(event)"> 
+                    </td>
                 </tr>
                 <tr></tr>
                 <tr>
-                    <td></td>
-                    <td class="td_inf" > <input type="button" value="interes"
-                        name="enviar" onclick="interes()" > </td> 
+                    <td class="td_sup">
+                        Digite el número de ventas realizadas:
+                    </td>
+                    <td class="td_inf">
+                        <input type="text" name="ventas" onkeypress="return validarn(event)"> 
+                    </td>
                 </tr>
                 <tr></tr>
                 <tr>
-                    <td class="td_sup" >Su saldo total con interes al 2% es:</td>
-                    <td class="td_inf"> <input type="text" name="sueldoti"
-                        id="cantidadi" readonly="readonly" 
-                        class="input_text" > </td>
+                    <td class="td_sup"></td>
+                    <td class="td_inf">
+                        <input type="button" value="Obtener sueldo" name="enviar" onclick="calculo()">
+                    </td>
                 </tr>
                 <tr></tr>
                 <tr>
-                    <td></td>
-                    <td class="td_inf"> <input type="button" value="Borrar" 
-                        name="reset" onclick="borrar()"> </td>
+                    <td class="td_sup">
+                        Total por comisiones:
+                    <td class="td_inf">
+                        <input type="text" name="comisionn" id="cantidad" readonly="readonly" class="input_text"> 
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td class="td_sup">
+                        Total a recibir:
+                    </td>
+                    <td class="td_inf">
+                        <input type="text" name="sueldoti" id="cantidadi" readonly="readonly" class="input_text"> 
+                    </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <td class="td_inf"></td>
+                    <td class="td_inf">
+                        <input type="button" value="Borrar" name="reset" onclick="borrar()">
+                    </td>
                 </tr>
             </table>
         </form>
     </center>
     <br><br><br><br><br><br><br><br><br>
     <a href="formulario.html">Regresar al formulario principal</a>
+    
     <footer class="pie">
         <table>
             <tr style="width: 90%;">

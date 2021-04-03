@@ -8,17 +8,16 @@ function validarn(e){
     return patron.test(prueba)
 }
 
-function interes(){
+function descuento(){
     var valor=document.formulario.cantidad.value;
     var result=parseInt(valor);
-    var interes=result*.02;
-    var total=result+interes;
+    var descuento=result*.15;
+    var total=result-descuento;
 
     document.formulario.sueldoti.value="$"+total;
 
 }
 function borrar(){
     document.formulario.cantidad.value = "";
-    document.formulario.cantidadb.value = "";
     document.formulario.sueldoti.value = "";
 }
