@@ -67,22 +67,41 @@ function problema2(){
     'Producto Escalar Minimo : '+ p2_producto;
 
 }
-
 function problema3(){
 
-    let P3_input = document.querySelector('#p3-input').value;
-    let separador = P3_input.split(",");
-    let resultadopalabra = " ";
+    var tamanos = [];
+    var tam = [];
 
-    for(let word of separador){
-        if(word.length > resultadopalabra.length){
-        resultadopalabra = word;
-        var p3_input = resultadopalabra.split("");
-        var Num = p3_input.length;
-        var resultadopalabraM = resultadopalabra.toUpperCase();
+    var palabra = document.getElementById('p3-input').value;
+
+    if(palabra!=''){
+
+        var array = palabra.split(',');
+        for (var i = 0; i < array.length; i++){
+            
+            var letras = array[i];
+
+            var str1Unique = [...new Set(letras.split(''))];
+
+            var result = str1Unique.length;
+            var res = str1Unique.length;
+
+            var resultado = str1Unique.join("");
+
+            console.log(str1Unique);
+
+            tamanos.push(result);
+            tam.push(result)
         }
-    }
-//no se si la funcion word funcione con otra palabra ya que el sitio del que la vi estaba en ingles
+        
 
-    document.querySelector('#p3-output').textContent = resultadopalabraM + ' = '  + Num +' {'+ p3_input + '}';
+
+        var mayor = Math.max.apply(null, tamanos)
+
+        console.log(mayor);
+
+        document.querySelector('#p3-output').textContent = "El mayor numero de caracteres es " + mayor;
+    
+    }
+
 }
