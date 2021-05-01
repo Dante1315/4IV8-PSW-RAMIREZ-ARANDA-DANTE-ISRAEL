@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registro de Usuarios</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="./CSS/estilo.css">
+            <script src="JS/Validar.js" ></script>
+
+
+    </head>
+    <body>
+        <header>
+        <nav class="navegacion" style="width: 100%;">
+            <ul class="menu"> 
+                <li ><a href="index.html">Menu</a></li>
+                <li ><a href="curr.html">Curriculum</a></li>
+                <li><a href="algoritmia.html">algoritmia</a></li>
+                <li><a href="">Problemas JS</a>
+                     <ul class="sub">
+                         <center>
+                            <li><a href="problama01.html">Problema 1</a></li>
+                            <li><a href="problema2.html">Problema 2</a></li>
+                            <li><a href="problema3.html">Problemas 3</a></li>
+                            <li><a href="problema41.html">Problema 4</a></li>
+                            <li><a href="problema5.html">Problema 5</a></li>
+                            <li><a href="problema6.html">Problemas 6</a></li>
+                            <li><a href="problema7.html">Problema 7</a></li>
+                            <li><a href="problema8.html">Problema 8</a></li>
+                            <li><a href="problema9.html">Problema 9</a></li>
+                            <li><a href="problema10.html">Problemas 10</a></li>
+                        </center>
+                     </ul>
+                 </li> 
+                 <li><a href="CRUD/web/mCrud.html">CRUD</a></li>               
+            </ul>
+        </nav>
+    </header>
+        
+                <center>
+                        <h2>Registro de Usuario</h2>
+                        <br><br>
+
+                        <form name="formulario" method="post" 
+                      action="Registro">
+                        <table>
+                            <tr>
+                                <td class="td_sup">Nombre</td>
+                                <td class="td_inf"><input type="text" name="nom"></td>
+                            </tr>
+                            <tr></tr>
+                             <tr>
+                                <td class="td_sup">Apellido paterno</td>
+                                <td class="td_inf"><input type="text" name="ap"></td>
+                            </tr>
+                            <tr></tr>
+                             <tr>
+                                <td class="td_sup">Apellido materno</td>
+                                <td class="td_inf"><input type="text" name="am"></td>
+                            </tr>
+                            <tr></tr>
+                             <tr>
+                                <td class="td_sup">Edad</td>
+                                <td class="td_inf"><input type="number" min="1" max="99" size="2" name="edad"></td>
+                            </tr>
+                            <tr></tr>
+                             <tr>
+                                <td class="td_sup">Correo</td>
+                                <td class="td_inf"><input type="email" name="correo"></td>
+                            </tr>
+                        </table>
+                            <br>
+                            
+                    <input type="submit" value="Registro de Usuarios" >
+                    <input type="reset" value="Borrar Registro" >
+                </form>
+            </center>
+
+            <br>
+            
+            <center>
+                <h2>Eliminar Usuario</h2>
+                <div class="containerEliminar" >
+                <br>
+                <form method="post" name="formularioeliminar" action="Eliminar">
+                    <label>ID del Usuario a Eliminar</label>
+                    <input type="number" name="ideliminar" onkeypress="return validarn(event)" >
+                    <br>
+                    <br>
+                    <input type="submit" value="Eliminar Usuario" >
+                </form>
+                
+            </div>
+
+            </center>
+            
+            <center>
+                <h2>Consultar usuarios</h2>
+               <div class="containerConsulta" >
+                    <br>
+                        <form method="get" name="consultarregistro" action="Consultar">
+                            <input type="submit" value="Consultar Tabla de Usuarios" >
+                        </form>
+                </div>
+            </center>
+            
+            <br>
+            <center>
+                <div class="containerActualizar">
+                <br>
+                <h2>Actualizar usuario</h2>
+                <form method="post" name="actualizarregistro" action="Actualizar">
+                    <label>ID del Usuario</label>
+                    <input type="number" name="idactualizar">
+                    <br>
+                        <label>Nuevo nombre:</label>
+                        <input type="text" name="nombre_a" onkeypress="return validarp(event)">
+                        <br>
+                        <label> Nuevo Apellido Paterno:</label>
+                        <input type="text" name="appat_a" onkeypress="return validarp(event)">
+                        <br>
+                        <label>Nuevo Apellido Paterno:</label>
+                        <input type="text" name="appmat_a" onkeypress="return validarp(event)">
+                        <br>
+                        <label>Nueva Edad:</label>
+                        <input type="number" name="edad_a" min="01" max="99" size="2" onkeypress="return validarn(event)">
+                        <br>
+                        <label>Nuevo Correo</label>
+                        <input type="email" name="correo_a" onkeypress="return validarcA(event)">
+                        <br>
+                    <br>
+                    <br>
+                    <input type="submit" value="Actualizar Usuario">
+                    <input type="reset" value="Borrar Datos" >
+                </form>
+            </div>
+    
+            </center>
+            
+            <footer class="pie">
+           <table>
+               <tr style="width: 90%;">
+                    <td style="width: 40%;">Pagina realizada por: Ramirez Aranda Dante Israel</td>
+                    <center><td style="width: 20%;"> Grupo:4IV8</td></center>
+                    <td style="width: 20%;">Esta pagina y las demas mejoraran conforme mi aprendizaje</td>
+                </tr>
+           </table>
+    </footer>
+
+            
+            
+            
+            
+            
+    </body>
+</html>
